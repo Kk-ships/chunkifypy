@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "chunkifypy"
+version = "0.1.0"
+description = "ChunkifyPy is a Python package designed to simplify the process of breaking down sizable Python objects into smaller, manageable chunks. This package is an invaluable tool for applications requiring seamless streaming or transmission of data in controlled portions."
+authors = ["Kaustubh Shirpurkar <kaustubh.shirpurkar@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+more-itertools = "^10.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.289"
+black = "^23.9.1"
+pre-commit = "^2.16.0"
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+# PYLINT - PL
+# PYFLAKES - F
+# PYCODESTYLE - (E + W)
+# ISORT - I
+# PEP8-NAMING - N
+# PYDOCSTYLE - D
+# flake8-simplify (SIM)
+# flake8-bugbear (B)
+# flake8-builtins (A)
+# flake8-comprehensions (C4)
+# flake8-pie (PIE)
+# RUFF specific rules (RUF)
+select = ["PL", "E", "F", "W", "I", "N", "D", "SIM", "B", "A", "C4", "PIE", "RUF"]
+ignore = ["D205", "D401", "D104", "D301", "N999"]
+target-version = "py310"
+fix = true # Automatically fix issues
+
+[tool.ruff.pydocstyle]
+# Use Google-style docstrings.
+convention = "google"
