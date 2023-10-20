@@ -1,9 +1,17 @@
 [tool.poetry]
 name = "chunkifypy"
-version = "0.1.0"
+version = "0.1.1"
 description = "ChunkifyPy is a Python package designed to simplify the process of breaking down sizable Python objects into smaller, manageable chunks. This package is an invaluable tool for applications requiring seamless streaming or transmission of data in controlled portions."
 authors = ["Kaustubh Shirpurkar <kaustubh.shirpurkar@gmail.com>"]
 readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.urls]
+"repository" = "https://github.com/Kk-ships/chunkifypy"
 
 [tool.poetry.dependencies]
 python = "^3.10"
